@@ -1,0 +1,40 @@
+{
+  "name": "Vol Horiz Cylinder",
+  "short_name": "HorizCylinder",
+  "start_url": "index.html",
+  "id": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "maskable512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "cylinder192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshotnarrow.png",
+      "sizes": "676x946",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshotwide.png",
+      "sizes": "800x500",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "window_controls_overlay": {
+    "color": "#ffffff"
+  },
+  "description": "This app calculates volumes of partially filled horizontal cylinderical tanks"
+}

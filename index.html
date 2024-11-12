@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Cylindrical Mud Tank</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Additional line added to link manifest to the index file -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- End of manifest link addition -->
+  </head>
+  <body>
+    <div class="container">
+      <h2>Volumes in Horizontal Cylindrical Tanks</h2>
+      <form id="Cylindertank">
+        <label for="DiaMeter"><strong>Diameter in meters</strong></label>
+        <input
+          type="number"
+          id="DiaMeter"
+          name="DiaMeter"
+          step="0.01"
+          placeholder="Enter diameter of tank in meters"
+          required
+        />
+
+        <label for="LenMeter"><strong>Length of tank in meters</strong></label>
+        <input
+          type="number"
+          id="LenMeter"
+          name="LenMeter"
+          step="0.01"
+          placeholder="Enter length of the tank in meters"
+          required
+        />
+
+        <label for="LiquidDep"
+          ><strong>Enter height of Fluid from Bottom in meters:</strong></label
+        >
+        <input
+          type="number"
+          id="LiquidDep"
+          name="LiquidDep"
+          step="0.01"
+          placeholder="Enter height of liquid in meters"
+          required
+        />
+
+        <label for="fluiddensity"
+          ><strong>Enter Fluid Density in Kg/liter:</strong></label
+        >
+        <input
+          type="number"
+          id="fluiddensity"
+          name="fluiddensity"
+          step="0.01"
+          placeholder="Enter fluid density of fluid Kg/liter"
+          required
+        />
+
+        <button type="button" onclick="CalculateVolumes()">
+          <strong>Calculate the Results</strong>
+        </button>
+      </form>
+
+      <div id="result"></div>
+
+      <!-- Footer with copyright notice -->
+      <footer>
+        <p>&copy; 2024 Ranjit Singh. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./service-worker.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.error("Service Worker registration failed:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
